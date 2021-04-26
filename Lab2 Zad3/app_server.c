@@ -16,19 +16,7 @@ wyjscie *
 obliczenia_1_svc(wejscie *argp, struct svc_req *rqstp)
 {
 	static wyjscie  result;
-
-    //rpc
-	//result.suma    = argp->x1 + argp->x2;
-	//result.roznica = argp->x1 - argp->x2;
-	//result.iloczyn = argp->x1 * argp->x2;
-    //int numer = argp->x1;
-    //printf("\n%d", argp->x1);
-    
-    //printf("\n0x%x\n", argp->x1);
-    //printf("\n0x%x\n", argp->x2);
-    
-    //tcp
-	//return &result;
+	
     char msg[256];
     sprintf(msg, "%d", argp->x1);
     //tworzenie socketa
