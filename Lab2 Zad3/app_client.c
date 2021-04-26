@@ -16,7 +16,6 @@ testowy_1(char *host)
     int liczba1, liczba2;
     printf("\nPodaj wiadomosc: ");
     scanf("%d", &liczba1);
-    //scanf("%d", &liczba2);
     
 #ifndef	DEBUG
 	clnt = clnt_create (host, TESTOWY, PROBNA, "udp");
@@ -33,11 +32,6 @@ testowy_1(char *host)
 	if (result_1 == (wyjscie *) NULL) {
 		clnt_perror (clnt, "call failed");
 	}
-	//printf("\nWprowadzone dane:\t%d\t%d\n", liczba1, liczba2);
-	//printf("\nUzyskane wyniki:\n");
-	//printf("\tsuma:\t%d\n\n",result_1->suma);
-    //printf("\tsuma:\t\t%d\n\troznica:\t%d\n\tiloczyn:\t%d\n\n",
-	//	result_1->suma, result_1->roznica, result_1->iloczyn);
 
 #ifndef	DEBUG
 	clnt_destroy (clnt);
